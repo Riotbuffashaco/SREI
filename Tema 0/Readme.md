@@ -4,6 +4,100 @@
 
 ### Server HTTPs
 
+Actividad 0.1 - HTTP Introduction
+https://www.youtube.com/watch?v=eesqK59rhGA
+https://www.youtube.com/watch?v=DuSURHrZG6I
+
+¿Quién, dónde y cuándo se crea el primer servidor web?
+
+Tim Berners Lee, en el cern, en 1990
+
+¿Cuál es la pila de protocolos usados por http?
+	
+HTTP, TCP, IP
+
+¿Componentes de una URL?
+	
+Protocolo
+Anfitrión
+Puerto red
+Ruta
+
+¿Pasos en la recuperación de una página web mediante HTTP?
+	1º con el comande GET
+	2º observamos el codigo que da
+Diferencia entre páginas dinámicas y estáticas
+	Las estáticas son archivos html puros, mientras que las dinámicas presentan comandos de actualización de la pagina
+ 
+¿Cómo usar telnet para acceder a un servidor web?
+	(solución en actividad 0.3)
+Request. Métodos principales
+
+GET 
+POST
+HEAD
+
+Actividad 0.2 - UDP and TCP: Comparison of Transport Protocols
+https://www.youtube.com/watch?v=Vdc8TCESIg8
+
+Diferencias entre udp y tcp? 
+
+TCP es un protocolo confiable que garantiza la entrega de los datos en el orden
+correcto, pero es más lento. UDP es más rápido, pero no asegura la entrega ni el orden de los datos, ideal para aplicaciones en tiempo real.
+
+¿Qué aplicaciones usan tcp?
+
+Navegadores web
+Correo electrónico
+Transferencia de archivos
+Mensajería instantánea y redes sociales
+Conexiones remotas
+
+¿Qué aplicaciones usan udp?
+
+Streaming de video y audio en tiempo real (YouTube, Netflix, Twitch, etc.)
+Videojuegos en línea (como Fortnite, PUBG, etc.)
+VoIP (Voz sobre IP) (como Skype, Zoom, WhatsApp)
+DNS (Sistema de nombres de dominio) para consultas rápidas.
+Protocolos de transmisión en red como SNMP (para monitorear redes) y DHCP.
+
+¿Qué capa almacena el puerto?
+
+La capa de transporte
+
+¿Qué capa almacena la dirección IP?
+
+La capa de red
+
+¿Qué es three-way handshake?
+
+Es un proceso para establecer una conexion entre cliente y servidor. 
+
+Tiene 3 pasos:
+SYN: El cliente envía un mensaje SYN (synchronize) al servidor para iniciar la conexión.
+SYN-ACK: El servidor responde con un SYN-ACK (synchronize acknowledgment) para reconocer la solicitud.
+ACK: El cliente envía un ACK (acknowledgment) al servidor confirmando la respuesta.
+
+
+Actividad 0.4 - Usando cUrl
+https://curl.se/docs/manual.html
+
+Busca información sobre el comando curl y muestra al menos cinco ejemplos de uso
+
+cUrl es una herramienta de línea de comandos utilizada para transferir datos desde o hacia un servidor mediante varios protocolos
+
+
+Realizar una petición HTTP simple
+
+Guardar el contenido de una URL en un archivo
+
+Descargar un archivo y renombrarlo
+
+Enviar datos a través de una petición POST
+
+Enviar una petición con cabeceras específicas
+
+
 Actividad 0.5 - Práctica servidor web
 
 Visita los siguientes enlaces:
