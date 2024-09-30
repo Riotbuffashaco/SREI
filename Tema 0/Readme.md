@@ -18,18 +18,18 @@ HTTP, TCP, IP
 
 **¿Componentes de una URL?**
 	
-Protocolo
-Anfitrión
-Puerto red
-Ruta
++ Protocolo
++ Anfitrión
++ Puerto red
++ Ruta
 
 **¿Pasos en la recuperación de una página web mediante HTTP?**
 
-1º con el comande GET
++ 1º con el comando GET
 
-2º observamos el codigo que da
++ 2º observamos el codigo que da
 
-Diferencia entre páginas dinámicas y estáticas
+**Diferencia entre páginas dinámicas y estáticas**
 
 Las estáticas son archivos html puros, mientras que las dinámicas presentan comandos de actualización de la pagina
  
@@ -37,11 +37,10 @@ Las estáticas son archivos html puros, mientras que las dinámicas presentan co
 (solución en actividad 0.3)
 Request. Métodos principales
 
-GET 
-POST
-HEAD
++ GET 
++ POST
++ HEAD
 	
-
 ***Actividad 0.2 - UDP and TCP: Comparison of Transport Protocols***
 https://www.youtube.com/watch?v=Vdc8TCESIg8
 
@@ -52,11 +51,11 @@ correcto, pero es más lento. UDP es más rápido, pero no asegura la entrega ni
 
 **¿Qué aplicaciones usan tcp?**
 
-Navegadores web
-Correo electrónico
-Transferencia de archivos
-Mensajería instantánea y redes sociales
-Conexiones remotas
++ Navegadores web
++ Correo electrónico
++ Transferencia de archivos
++ Mensajería instantánea y redes sociales
++ Conexiones remotas
 
 **¿Qué aplicaciones usan udp?**
 
@@ -82,7 +81,6 @@ Tiene 3 pasos:
 SYN: El cliente envía un mensaje SYN (synchronize) al servidor para iniciar la conexión.
 SYN-ACK: El servidor responde con un SYN-ACK (synchronize acknowledgment) para reconocer la solicitud.
 ACK: El cliente envía un ACK (acknowledgment) al servidor confirmando la respuesta.
-
 
 
 ***Actividad 0.3 - Práctica telnet/http***
@@ -116,15 +114,15 @@ https://curl.se/docs/manual.html
 
 cUrl es una herramienta de línea de comandos utilizada para transferir datos desde o hacia un servidor mediante varios protocolos
 
-Realizar una petición HTTP simple
++ Realizar una petición HTTP simple
 
-Guardar el contenido de una URL en un archivo
++ Guardar el contenido de una URL en un archivo
 
-Descargar un archivo y renombrarlo
++ Descargar un archivo y renombrarlo
 
-Enviar datos a través de una petición POST
++ Enviar datos a través de una petición POST
 
-Enviar una petición con cabeceras específicas
++ Enviar una petición con cabeceras específicas
 
 
 ***Actividad 0.5 - Práctica servidor web***
@@ -150,7 +148,7 @@ Publica en GitHub los ejemplos llevados a cabo. Los ejemplos se acompañaran con
 
 ---
 
-1 Simple web server 
+1-Simple web server 
 
 CON EL CODIGO *python -m http.server 8000* LO INTRODUCIMOS EN LA CMD Y OBSERVAMOS COMO SE CREA EL SERVIDOR EN EL PUERTO 8000.
 
@@ -158,11 +156,11 @@ CON EL CODIGO *python -m http.server 8000* LO INTRODUCIMOS EN LA CMD Y OBSERVAMO
 
 ---
 
-2 HTTP server
+2-HTTP server
 
 ---
 
-3 CREAMOS UN DOCUMENTO PYTHON CON EL SIGUIENTE CODIGO:
+3-CREAMOS UN DOCUMENTO PYTHON CON EL SIGUIENTE CODIGO:
 
 
 ``` python
