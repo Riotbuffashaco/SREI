@@ -40,7 +40,8 @@ Request. Métodos principales
 + GET 
 + POST
 + HEAD
-	
+
+---
 ***Actividad 0.2 - UDP and TCP: Comparison of Transport Protocols***
 https://www.youtube.com/watch?v=Vdc8TCESIg8
 
@@ -82,6 +83,7 @@ SYN: El cliente envía un mensaje SYN (synchronize) al servidor para iniciar la 
 SYN-ACK: El servidor responde con un SYN-ACK (synchronize acknowledgment) para reconocer la solicitud.
 ACK: El cliente envía un ACK (acknowledgment) al servidor confirmando la respuesta.
 
+---
 
 ***Actividad 0.3 - Práctica telnet/http***
 https://www.youtube.com/watch?v=xpBpGC08f4Q&t=189s
@@ -106,6 +108,7 @@ y escribimos GET para obtener la información
 
 ![imagen](https://github.com/user-attachments/assets/c54d79ee-e139-436b-b28a-8c834f20e69b)
 
+---
 
 ***Actividad 0.4 - Usando cUrl***
 https://curl.se/docs/manual.html
@@ -114,16 +117,42 @@ https://curl.se/docs/manual.html
 
 cUrl es una herramienta de línea de comandos utilizada para transferir datos desde o hacia un servidor mediante varios protocolos
 
-+ Realizar una petición HTTP simple
++ Hacer una solicitud GET básica (Este comando muestra el contenido HTML de la página en la terminal.)
 
-+ Guardar el contenido de una URL en un archivo
+![imagen](https://github.com/user-attachments/assets/496232ab-c266-4e47-a0be-60ff77b6fd94)
 
-+ Descargar un archivo y renombrarlo
+`curl https://www.ejemplo.com`
 
-+ Enviar datos a través de una petición POST
 
-+ Enviar una petición con cabeceras específicas
++ Mostrar solo los encabezados de una respuesta
+ 
+![imagen](https://github.com/user-attachments/assets/aa1abae2-0b88-4811-bb9d-600c815d1b16)
 
+`curl -I https://www.ejemplo.com`
+
+
++ Descargar un archivo y renombrarlo (Esto descargará el archivo al directorio actual.)
+
+![imagen](https://github.com/user-attachments/assets/10ed35ae-0759-4385-b32a-66f1b9065e38)
+
+`curl -O https://www.ejemplo.com/archivo.zip`
+
+
++ Guardar la salida en un archivo (Esto guarda el contenido de la página web en un archivo llamado google.html.)
+
+![imagen](https://github.com/user-attachments/assets/7f68d523-7f6d-40cb-b706-cdffe9c4b0c2)
+
+`curl https://www.ejemplo.com -o salida.html`
+
+
++ Probar una conexión a una URL (Este comando solo te mostrará el código de estado HTTP de la respuesta (por ejemplo, 200 significa que todo está bien).)
+
+![imagen](https://github.com/user-attachments/assets/45e1f8cf-10be-4ce3-a0d3-f8c5b55f28ad)
+
+`curl -o /dev/null -s -w "%{http_code}\n" https://www.ejemplo.com`
+
+
+---
 
 ***Actividad 0.5 - Práctica servidor web***
 
