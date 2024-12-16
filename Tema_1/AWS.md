@@ -35,6 +35,7 @@ Instala y configura el módulo mod_auth_mysql para usar la base de datos MySQL p
 Luego, edita el archivo de configuración de Apache para incluir algo como esto:
 apache
 Copiar código
+
 <Directory "/var/www/html/protegido">
     AuthType Basic
     AuthName "Área Restringida"
@@ -49,7 +50,7 @@ Copiar código
     Require valid-user
 </Directory>
 
-4. Reiniciar Apache
+5. Reiniciar Apache
 Finalmente, reinicia Apache para que todos los cambios tengan efecto:
 bash
 Copiar código
