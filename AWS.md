@@ -1,25 +1,20 @@
-
-
-1. Configurar la autenticación MySQL en Apache
+## 1. Configurar la autenticación MySQL en Apache
 La autenticación MySQL te permite proteger directorios del servidor web utilizando una base de datos MySQL como backend para usuarios y contraseñas.
 
 Paso 1: Instalar el módulo libapache2-mod-auth-mysql
-En Ubuntu, instala el módulo necesario para conectar Apache con MySQL:
-
-bash
-Copiar código
+```
 sudo apt update
 sudo apt install libapache2-mod-auth-mysql -y
+```
 Paso 2: Configurar la autenticación en un directorio específico
 Edita el archivo de configuración del sitio en Apache:
-
-bash
-Copiar código
+```
 sudo nano /etc/apache2/sites-available/000-default.conf
-Dentro de la sección <VirtualHost *:80>, agrega la configuración para proteger un directorio. Por ejemplo:
+```
+Dentro de la sección <VirtualHost *:80>, agrega la configuración para proteger un directorio.
 
-apache
-Copiar código
+Por ejemplo:
+```
 <Directory "/var/www/html/protegido">
     AuthType Basic
     AuthName "Área Restringida"
@@ -33,61 +28,65 @@ Copiar código
     AuthMySQLPasswordField contraseña
     Require valid-user
 </Directory>
+```
 Crea el directorio protegido:
 
-bash
-Copiar código
+```
 sudo mkdir /var/www/html/protegido
 echo "Este contenido está protegido" | sudo tee /var/www/html/protegido/index.html
+```
+
 Paso 3: Reiniciar Apache
 Reinicia Apache para aplicar los cambios:
-
-bash
-Copiar código
+```
 sudo systemctl restart apache2
-2. Configurar un certificado SSL autofirmado
+```
+
+## 2. Configurar un certificado SSL autofirmado
+   
 Paso 1: Generar el certificado autofirmado
 Crea el certificado y la clave privada:
-bash
-Copiar código
-sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/apache-selfsigned.key -out /etc/ssl/certs/apache-selfsigned.crt
-Completa los campos que se te soliciten:
-Common Name (CN): Ingresa la IP o dominio de la máquina virtual.
-Paso 2: Configurar Apache para usar el certificado
-Habilita el módulo SSL y el sitio SSL:
 
-bash
-Copiar código
+```
+sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/apache-selfsigned.key -out /etc/ssl/certs/apache-selfsigned.crt
+```
+
+Paso 2: Configurar Apache para usar el certificado
+
+Habilita el módulo SSL y el sitio SSL:
+```
 sudo a2enmod ssl
 sudo a2ensite default-ssl
+```
+
 Edita el archivo de configuración del sitio SSL:
 
-bash
-Copiar código
+```
 sudo nano /etc/apache2/sites-available/default-ssl.conf
-Asegúrate de que las siguientes líneas apunten al certificado y clave que creaste:
+```
+Asegúrate de que las siguientes líneas apunten al certificado y clave:
 
-apache
-Copiar código
+```
 SSLEngine on
 SSLCertificateFile /etc/ssl/certs/apache-selfsigned.crt
 SSLCertificateKeyFile /etc/ssl/private/apache-selfsigned.key
+```
+
 Reinicia Apache para activar SSL:
 
-bash
-Copiar código
+```
 sudo systemctl restart apache2
+```
 Paso 3: Probar HTTPS
+
 Accede a tu máquina virtual mediante HTTPS en el navegador:
-
-arduino
-Copiar código
+```
 https://<IP-de-la-maquina-virtual>
-Es normal que aparezca una advertencia de seguridad porque el certificado está autofirmado. Acepta el certificado para continuar.
+```
 
-3. Verificar la configuración
+## 3. Verificar la configuración
+
 Probar autenticación MySQL:
-
 Accede al directorio protegido (http://<IP>/protegido) y verifica que se solicite usuario y contraseña.
 
 
