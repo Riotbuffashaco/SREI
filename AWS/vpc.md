@@ -74,6 +74,18 @@ La configuración quedará algo así:
 
 ![imagen](https://github.com/user-attachments/assets/aec64b38-9374-4660-be6d-52469121b47e)
 
+![imagen](https://github.com/user-attachments/assets/c65260cf-931f-48ce-ba57-dd09d6fb44eb)
+
+![imagen](https://github.com/user-attachments/assets/9819b269-c1aa-4060-a2b6-3348d075b1f5)
+
+
+una vez creada, configuraremos la conexion de EC2:
+
+![imagen](https://github.com/user-attachments/assets/be4dfe22-e3ea-4ddc-b5af-3bb0bbb11cb4)
+
+![imagen](https://github.com/user-attachments/assets/2bc444f6-6531-4f1f-9391-7f577c52e031)
+
+
 
 
 
